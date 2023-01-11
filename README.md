@@ -200,3 +200,7 @@ CONFIG_PASSPHRASE=passphrase ts-node encrypt-config.ts
 yarn run build && yarn run start
 ```
 
+7. To debug locally in VSCode, run the following command and then run the `Debug: Relayer node` configuration in the VSCode debugger.
+```jsx
+yarn docker:debug
+```

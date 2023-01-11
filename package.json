@@ -6,6 +6,8 @@
     "format:relayer": "eslint 'relayer/src/**' --ext .ts --fix",
     "prepare": "husky install",
     "dev": "ts-node server/src/index.ts",
+    "debug": "nodemon --watch src/**/* -e ts,json --exec node --inspect-brk=0.0.0.0:9227 -r ts-node/register server/src/index.ts",
+    "docker:debug": "docker-compose -f docker-compose.debug.yaml up",
     "build": "tsc -p server",
     "start": "node server/dist/server/src/index.js",
     "test": "jest"
@@ -36,6 +38,7 @@
     "morgan": "^1.10.0",
     "network-sdk": "^1.0.1",
     "node-cron": "^3.0.2",
+    "nodemon": "^2.0.20",
     "redis": "^4.3.1",
     "rest-api-errors": "^1.2.5",
     "serialize-error": "8.1.0",
@@ -60,6 +63,7 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "jest": "^29.1.2",
-    "ts-jest": "^29.0.3"
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1"
   }
 }
