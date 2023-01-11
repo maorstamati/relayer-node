@@ -6,3 +6,7 @@ relayer/dist
 server/dist
 coverage
 config/config.json
+mongo-data/**
+redis-data/**
+rabbitmq_data/**
+rabbitmq_log/**
